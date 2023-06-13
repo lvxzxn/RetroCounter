@@ -34,7 +34,6 @@ namespace RetroCounter.Habbo
                 _client.SOCKS5EndPoint = new IPEndPoint(IPAddress.Parse(Hotel.Proxy.Ip), Hotel.Proxy.Port);
             
             await _client.ConnectAsync(IPAddress.Parse(hotel.Host), hotel.Port);
-
             
             SendToServer(Outgoing.Production.Header, Outgoing.Production.Release, "FLASH", 1, 0);
             SendToServer(Outgoing.ClientVariables.Header, 401, Outgoing.ClientVariables.Text1, Outgoing.ClientVariables.Text2);
